@@ -17,14 +17,10 @@ function App() {
 
   return (
     <div className="App">
-      <RequestList />
-      <Button onClick={onClose}>
-        {
+      <RequestList> {
           tg.MainButton.tg.MainButton.show()
-        }
-        {
-          tg.MainButton.setText('Оставить заявку')
-        }</Button>
+        }</RequestList>
+      <Button onClick={onClose}></Button>
       <span className={'username'}>{tg.initDataUnsafe?.user?.username}</span>
     </div>
   );
