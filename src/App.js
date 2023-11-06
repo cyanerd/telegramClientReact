@@ -17,6 +17,7 @@ function App() {
   return (
     <div className="App">
       <RequestList/>
+      <button onClick={onClose}></button>
     </div>
   );
 }
