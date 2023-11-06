@@ -14,7 +14,7 @@
     justify-content: space-between;
     padding: 10px;
     background-color: #373b47;
-    color: #c08177;
+    color: #c0bebd;
     font-weight: bold;
     align-items: center;
   }
@@ -29,7 +29,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    color: #c08177;
+    color: #c0bebd;
     padding: 10px;
     border-bottom: 2px solid #000000;
     align-items: center;
@@ -42,6 +42,7 @@
   request-status {
     flex: 1;
     text-align: center;
+    
   }
   
   .request-subject,
@@ -66,7 +67,7 @@
   }
   
   .request-status {
-    width: 20%; /* Фиксированная ширина для Статуса заявки */
+    width: 20%; /* Фиксированная шиина для Статуса заявки */
     text-align: center;
     word-wrap: break-word; /* Перенос слов в случае длинного текста */
   }
