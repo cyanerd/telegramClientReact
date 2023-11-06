@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import './App.css';
 import RequestList from './RequestOperator/RequestList';
+import Button from '../src/components/Button'
 
 const tg = window.Telegram.WebApp
 
@@ -17,7 +18,8 @@ function App() {
   return (
     <div className="App">
       <RequestList/>
-      <button onClick={onClose}></button>
+      <Button onClick={onClose}></Button>
+      <span className={'username'}>{tg.initDataUnsafe?.user?.username}</span>
     </div>
   );
 }
