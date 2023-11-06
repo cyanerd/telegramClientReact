@@ -18,8 +18,7 @@ function App() {
   return (
     <div className="App">
       <RequestList/>
-      <Button onClick={onClose}></Button>
-      <div>{tg.MainButton.show()};</div>
+      <Button onClick={onClose}>{tg.MainButton.show()}</Button>
       <span className={'username'}>{tg.initDataUnsafe?.user?.username}</span>
     </div>
   );
