@@ -7,18 +7,24 @@ const tg = window.Telegram.WebApp
 
 function App() {
 
-  useEffect(()=>{
+  useEffect(() => {
     tg.ready()
   }, [])
 
-  const onClose = () =>{
+  const onClose = () => {
     tg.close()
   }
 
   return (
     <div className="App">
-      <RequestList/>
-      <Button onClick={onClose}>{tg.MainButton.show()}</Button>
+      <RequestList />
+      <Button onClick={onClose}>
+        {
+          tg.MainButton.tg.MainButton.show()
+        }
+        {
+          tg.MainButton.setText('Оставить заявку')
+        }</Button>
       <span className={'username'}>{tg.initDataUnsafe?.user?.username}</span>
     </div>
   );
