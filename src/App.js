@@ -17,9 +17,6 @@ function App() {
 
   return (
     <div className="App">
-        {
-          tg.MainButton.show()
-        }
       <RequestList />
       <span className={'username'}>{tg.initDataUnsafe?.user?.username}</span>
     </div>
