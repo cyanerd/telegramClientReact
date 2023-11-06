@@ -12,7 +12,6 @@ const requestList = [
 const RequestList = () => {
     const { tg, queryId } = useTelegram();
 
-    // Функция для отображения кнопки и установки параметров
     const MainBut = () => {
         tg.MainButton.show();
         tg.MainButton.setParams({
@@ -21,7 +20,7 @@ const RequestList = () => {
     }
 
     useEffect(() => {
-        MainBut; // Вызываем функцию MainBut при монтировании компонента
+        MainBut(); 
     }, []);
 
     return (
