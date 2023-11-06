@@ -6,7 +6,6 @@ const requestList = [
     { id: 1, subject: 'Заявка 1', address: 'Адрес 1', status: 'В ожидании' },
     { id: 2, subject: 'Заявка 2', address: 'Адрес 2', status: 'В обработке' },
     { id: 3, subject: 'Заявка 3', address: 'Адрес 3', status: 'Завершено' },
-    // Добавьте больше заявок по вашему усмотрению
 ];
 
 const RequestList = () => {

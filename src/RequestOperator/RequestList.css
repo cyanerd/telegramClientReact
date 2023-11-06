@@ -42,7 +42,7 @@
   request-status {
     flex: 1;
     text-align: center;
-    
+
   }
   
   .request-subject,
@@ -50,25 +50,25 @@
     text-align: left;
   }
   .request-id {
-    width: 10%; /* Фиксированная ширина для ID */
+    width: 10%; 
     text-align: center;
   }
   
   .request-subject {
-    width: 40%; /* Фиксированная ширина для Темы заявки */
+    width: 40%; 
     text-align: center;
-    word-wrap: break-word; /* Перенос слов в случае длинного текста */
+    word-wrap: break-word; 
   }
   
   .request-address {
-    width: 30%; /* Фиксированная ширина для Адреса */
+    width: 30%; 
     text-align: center;
-    word-wrap: break-word; /* Перенос слов в случае длинного текста */
+    word-wrap: break-word; 
   }
   
   .request-status {
-    width: 20%; /* Фиксированная шиина для Статуса заявки */
+    width: 20%; 
     text-align: center;
-    word-wrap: break-word; /* Перенос слов в случае длинного текста */
+    word-wrap: break-word; 
   }
   
