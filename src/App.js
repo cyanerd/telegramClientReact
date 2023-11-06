@@ -13,15 +13,14 @@ function App() {
 
   const onClose = () => {
     tg.close()
-    {
-      tg.MainButton.tg.MainButton.show()
-    }
   }
 
   return (
     <div className="App">
-      <RequestList></RequestList>
-      <Button onClick={onClose}>нажми</Button>
+        {
+          tg.MainButton.show()
+        }
+      <RequestList />
       <span className={'username'}>{tg.initDataUnsafe?.user?.username}</span>
     </div>
   );
