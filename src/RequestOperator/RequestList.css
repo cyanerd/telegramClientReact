@@ -1,0 +1,73 @@
+.request-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #373b47;
+  }
+  
+  .request-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #373b47;
+    color: #c08177;
+    font-weight: bold;
+    align-items: center;
+  }
+  
+  .header-item {
+    flex: 1;
+    text-align: center;
+    background-color: #373b47;
+  }
+  
+  .request-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #c08177;
+    padding: 10px;
+    border-bottom: 2px solid #000000;
+    align-items: center;
+    background-color:#1F2630
+  }
+  
+  .request-id,
+  .request-subject,
+  request-address,
+  request-status {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .request-subject,
+  request-address {
+    text-align: left;
+  }
+  .request-id {
+    width: 10%; /* Фиксированная ширина для ID */
+    text-align: center;
+  }
+  
+  .request-subject {
+    width: 40%; /* Фиксированная ширина для Темы заявки */
+    text-align: center;
+    word-wrap: break-word; /* Перенос слов в случае длинного текста */
+  }
+  
+  .request-address {
+    width: 30%; /* Фиксированная ширина для Адреса */
+    text-align: center;
+    word-wrap: break-word; /* Перенос слов в случае длинного текста */
+  }
+  
+  .request-status {
+    width: 20%; /* Фиксированная ширина для Статуса заявки */
+    text-align: center;
+    word-wrap: break-word; /* Перенос слов в случае длинного текста */
+  }
+  
