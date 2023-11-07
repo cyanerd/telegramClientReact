@@ -8,7 +8,7 @@
   .form-group {
     margin-bottom: 20px;
     color:#c0bebd;
-    word-wrap: break-word; 
+    word-wrap: break-word;
   }
   
   label {
@@ -24,7 +24,6 @@
     border-radius: 5px;
     font-size: 16px;
     color:#c0bebd;
-    word-wrap: break-word; 
   }
   
   button {

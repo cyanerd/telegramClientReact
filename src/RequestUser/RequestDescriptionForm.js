@@ -12,15 +12,15 @@ const RequestDescriptionForm = ({ request }) => {
         </div>
         <div className="form-group">
           <label htmlFor="adres">Адрес</label>
-          <input type="text" id="adres" name="adres" value={request.adres} readOnly />
+          <textarea  type="text" id="adres" name="adres" value={request.adres} readOnly/>
         </div>
         <div className="form-group">
           <label htmlFor="description">Описание</label>
-          <input id="description" name="description" value={request.description} readOnly />
+          <textarea  id="description" name="description" value={request.description} readOnly />
         </div>
         <div className="form-group">
           <label htmlFor="dialog">Диалог с оператором</label>
-          <input id="dialog" name="dialog" value={request.dialog} readOnly />
+          <textarea  id="dialog" name="dialog" value={request.dialog} readOnly />
         </div>
       </form>
     </div>
