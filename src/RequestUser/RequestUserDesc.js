@@ -22,7 +22,6 @@ const RequestUserDesc = () => {
           history.goBack();
         };
         MainBut(); 
-        const tg = window.Telegram.WebApp;
         tg.BackButton.onClick(handleBackButton);
         return () => {
           tg.BackButton.offClick(handleBackButton);
