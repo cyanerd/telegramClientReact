@@ -1,6 +1,7 @@
 import React,{ useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import RequestDescriptionForm from './RequestDescriptionForm';
+import { useTelegram } from "../Hooks/useTelegram";
 
 const requestList = [
     { id: 1, subject: 'Тема 1', description: 'Описание 1', dialog: 'Пользователь: *Существует*\nОператор: *Существует*' },
@@ -9,6 +10,7 @@ const requestList = [
 ];
 
 const RequestUserDesc = () => {
+    const { tg, queryId } = useTelegram();
     const { id } = useParams();
     const request = requestList.find((item) => item.id === parseInt(id, 10));
     const MainBut = () => {
