@@ -76,7 +76,7 @@ const RequestUserList = () => {
             <div className="header-item">Статус заявки</div>
           </div>
           {requestList.map((request) => (
-            <Link to={`/requests/${request.id}`} key={request.id}>
+            <Link to={`/requests/${request.id}`} key={request.id} className="request-link">
               <div className="request-item">
                 <div className="request-id">{request.id}</div>
                 <div className="request-subject">{request.subject}</div>

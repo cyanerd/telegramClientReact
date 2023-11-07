@@ -17,9 +17,10 @@
     color: #c0bebd;
     font-weight: bold;
     align-items: center;
+  }
+  .request-link{
     text-decoration: none;
   }
-  
   .header-item {
     flex: 1;
     text-align: center;
@@ -34,7 +35,6 @@
     padding: 10px;
     border-bottom: 2px solid #000000;
     align-items: center;
-    text-decoration: underline;
     background-color:#1F2630
   }
   
@@ -44,7 +44,6 @@
   request-status {
     flex: 1;
     text-align: center;
-
   }
   
   .request-subject,
