@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import RequestDescriptionForm from './RequestDescriptionForm';
 
@@ -11,6 +11,17 @@ const requestList = [
 const RequestUserDesc = () => {
     const { id } = useParams();
     const request = requestList.find((item) => item.id === parseInt(id, 10));
+    const MainBut = () => {
+        tg.MainButton.hide();
+        tg.MainButton.setParams({
+            text: `Оставить заявку`
+        });
+    }
+
+    useEffect(() => {
+        MainBut(); 
+    }, []);
+
 
     if (!request) {
         return <div>Заявка не найдена</div>;
