@@ -16,14 +16,19 @@ const RequestUserDesc = () => {
     const MainBut = () => {
         tg.MainButton.hide();
         tg.BackButton.show()
-        tg.MainButton.setParams({
-            text: `Оставить заявку`
-        });
     }
-
     useEffect(() => {
+        const handleBackButton = () => {
+          history.goBack();
+        };
         MainBut(); 
-    }, []);
+        const tg = window.Telegram.WebApp;
+        tg.BackButton.onClick(handleBackButton);
+        return () => {
+          tg.BackButton.offClick(handleBackButton);
+        };
+      }, [history]);
+
 
 
     if (!request) {
