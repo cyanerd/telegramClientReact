@@ -17,6 +17,7 @@
     color: #c0bebd;
     font-weight: bold;
     align-items: center;
+    text-decoration: none;
   }
   
   .header-item {
@@ -33,6 +34,7 @@
     padding: 10px;
     border-bottom: 2px solid #000000;
     align-items: center;
+    text-decoration: underline;
     background-color:#1F2630
   }
   
