@@ -8,6 +8,7 @@
   .form-group {
     margin-bottom: 20px;
     color:#c0bebd;
+    word-wrap: break-word; 
   }
   
   label {

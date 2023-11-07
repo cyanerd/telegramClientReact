@@ -6,7 +6,7 @@ import { useTelegram } from "../Hooks/useTelegram";
 const requestList = [
     { id: 1, subject: 'Тема 1', description: 'Описание 1', dialog: 'Пользователь: *Существует*\nОператор: *Существует*', adres: 'Адрес 1' },
     { id: 2, subject: 'Тема 2', description: 'Описание 2', dialog: 'Пользователь: *Существует*\nОператор: *Существует*', adres: 'Адрес 2' },
-    { id: 3, subject: 'Тема 3', description: 'Описание 3', dialog: 'Пользователь: *Существует*\nОператор: *Существует*', adres: 'Адрес 3' },
+    { id: 3, subject: 'Тема 3', description: 'Описание 3sssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssssss', dialog: 'Пользователь: *Существует*\nОператор: *Существует*', adres: 'Адрес 3' },
 ];
 
 const RequestUserDesc = () => {
