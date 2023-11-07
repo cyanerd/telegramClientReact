@@ -57,19 +57,19 @@
   }
   
   .request-subject {
-    width: 40%; 
+    width: 50%; 
     text-align: center;
     word-wrap: break-word; 
   }
   
   .request-address {
-    width: 30%; 
+    width: 40%; 
     text-align: center;
     word-wrap: break-word; 
   }
   
   .request-status {
-    width: 20%; 
+    width: 33%; 
     text-align: center;
     word-wrap: break-word; 
   }

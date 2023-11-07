@@ -73,7 +73,6 @@ const RequestUserList = () => {
           <div className="request-header">
             <div className="header-item">ID</div>
             <div className="header-item">Тема заявки</div>
-            <div className="header-item">Адрес</div>
             <div className="header-item">Статус заявки</div>
           </div>
           {requestList.map((request) => (
@@ -81,7 +80,6 @@ const RequestUserList = () => {
               <div className="request-item">
                 <div className="request-id">{request.id}</div>
                 <div className="request-subject">{request.subject}</div>
-                <div className="request-address">{request.address}</div>
                 <div className="request-status">{request.status}</div>
               </div>
             </Link>

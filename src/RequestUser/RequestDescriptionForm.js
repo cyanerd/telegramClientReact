@@ -11,6 +11,10 @@ const RequestDescriptionForm = ({ request }) => {
           <input type="text" id="subject" name="subject" value={request.subject} readOnly />
         </div>
         <div className="form-group">
+          <label htmlFor="adres">Адрес</label>
+          <input type="text" id="adres" name="adres" value={request.adres} readOnly />
+        </div>
+        <div className="form-group">
           <label htmlFor="description">Описание</label>
           <textarea id="description" name="description" value={request.description} readOnly />
         </div>
