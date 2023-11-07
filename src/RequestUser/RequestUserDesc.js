@@ -17,8 +17,11 @@ const RequestUserDesc = () => {
     const request = requestList.find((item) => item.id === parseInt(id, 10));
 
     const MainBut = () => {
-        tg.MainButton.hide();
+        tg.MainButton.show();
         tg.BackButton.show()
+        tg.MainButton.setParams({
+            text: `Дополнить заявку`
+        });
     }
 
     useEffect(() => {
