@@ -1,26 +1,21 @@
-import { useEffect } from 'react';
+import React from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import RequestList from './RequestOperator/RequestList';
-import Button from '../src/components/Button/Button'
+import Button from '../src/components/Button/Button';
 import RequestUserList from './RequestUser/RequestUserList';
+import RequestUserDesc from './RequestUser/RequestUserDesc';
 
 const tg = window.Telegram.WebApp
 
 function App() {
-
-  useEffect(() => {
-    tg.ready()
-  }, [])
-
-  const onClose = () => {
-    tg.close()
-  }
-
   return (
-    <div className="App">
-      <RequestUserList />
-      <span className={'username'}>{tg.initDataUnsafe?.user?.username}</span>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<RequestUserList />} />
+        <Route path="/requests/:id" element={<RequestUserDesc />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
