@@ -16,11 +16,11 @@ const RequestDescriptionForm = ({ request }) => {
         </div>
         <div className="form-group">
           <label htmlFor="description">Описание</label>
-          <textarea id="description" name="description" value={request.description} readOnly />
+          <input id="description" name="description" value={request.description} readOnly />
         </div>
         <div className="form-group">
           <label htmlFor="dialog">Диалог с оператором</label>
-          <textarea id="dialog" name="dialog" value={request.dialog} readOnly />
+          <input id="dialog" name="dialog" value={request.dialog} readOnly />
         </div>
       </form>
     </div>
