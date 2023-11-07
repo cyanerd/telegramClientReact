@@ -15,6 +15,7 @@ const RequestUserDesc = () => {
     const request = requestList.find((item) => item.id === parseInt(id, 10));
     const MainBut = () => {
         tg.MainButton.hide();
+        tg.BackButton.show()
         tg.MainButton.setParams({
             text: `Оставить заявку`
         });
