@@ -12,8 +12,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<RequestUserList />} />
-        <Route path="/requests/:id" element={<RequestUserDesc />} />
+        <Route path="/" element={<RequestUserList />} />  
+        <Route path="/requests/:id" element={<RequestUserDesc />} />  
       </Routes>
     </BrowserRouter>
   );
