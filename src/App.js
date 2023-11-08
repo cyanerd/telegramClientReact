@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import RequestList from './RequestOperator/RequestList';
+import RequestListDesc from './RequestOperator/RequestListDesc';
 import Button from '../src/components/Button/Button';
 import RequestUserList from './RequestUser/RequestUserList';
 import RequestUserDesc from './RequestUser/RequestUserDesc';
@@ -12,11 +13,16 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<RequestUserList />} />  
-        <Route path="/requests/:id" element={<RequestUserDesc />} />  
+        <Route path="/" element={<RequestList />} />  
+        <Route path="/requestsOperator/:id" element={<RequestListDesc />} />  
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
+
+
+
+// <Route path="/" element={<RequestUserList />} />  
+//         <Route path="/requests/:id" element={<RequestUserDesc />} />  
