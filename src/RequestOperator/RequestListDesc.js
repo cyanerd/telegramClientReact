@@ -29,8 +29,8 @@ const RequestListDesc = () => {
                     username: item.username,
                     address: item.address
                 }));
-
-                console.log('Full Data Array:', dataArray[0]);
+                MainBut(dataArray[0].status);
+                console.log('Full Data Array:', dataArray[0].status);
                 setDataArray(dataArray);
             } catch (error) {
                 console.error('Ошибка при получении данных о заявке:', error);
@@ -39,11 +39,9 @@ const RequestListDesc = () => {
 
         fetchData();
     }, [id]);
-    const MainBut = () => {
+    const MainBut = (status) => {
         tg.BackButton.show();
-    
-        // Проверка на наличие элементов в массиве dataArray
-        if (dataArray.length > 0 && dataArray[0].status !== "В работе") {
+        if (status !== "В работе") {
             tg.MainButton.show();
             tg.MainButton.setParams({
                 text: `Взять в работу`
@@ -57,7 +55,7 @@ const RequestListDesc = () => {
         const handleBackButton = () => {
             navigate(-1);
         };
-        MainBut();
+        // MainBut();
         tg.BackButton.onClick(handleBackButton);
         return () => {
             tg.BackButton.offClick(handleBackButton);
