@@ -11,6 +11,24 @@ const RequestDescriptionForm = ({ request }) => {
         console.log('dsds')
     }
 
+    const renderButtons = () => {
+        if (request.status === 'ожидает ответа оператора') {
+            return (
+                <div>
+                    <button>Взять в работу</button>
+                    <button>Закрыть заявку</button>
+                </div>
+            );
+        } else if (request.status === 'В работе') {
+            return (
+                <div>
+                    <button>Закрыть заявку</button>
+                </div>
+            );
+        }
+        
+    }
+
     return (
         <div className="request-description-form">
             <h2>Описание заявки</h2>
@@ -35,7 +53,7 @@ const RequestDescriptionForm = ({ request }) => {
                     <label htmlFor="dialog">Диалог с оператором</label>
                     <textarea type="text" id="dialog" name="dialog" value={request.dialog} readOnly />
                 </div>
-                <button onClick={Onclose}> Закрыть заявку</button>
+                {renderButtons()}
             </form>
         </div>
     );

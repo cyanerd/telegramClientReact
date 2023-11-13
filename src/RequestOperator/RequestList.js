@@ -24,7 +24,7 @@ const RequestUserList = () => {
     };
 
     fetchData();
-  }, []); // Remove 'id' from the dependency array, as 'id' is not defined in the component
+  }, []); 
 
   return (
     <div className="request-list">
