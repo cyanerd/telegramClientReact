@@ -10,6 +10,12 @@ const RequestDescriptionForm = ({ request }) => {
         tg.close()
         console.log('dsds')
     }
+
+    const SendData = () =>{
+        tg.sendData('/desMes')
+        tg.close()
+    }
+
     const sendMes = useCallback(()=>{
         const senMessage = "/desMes";
         tg.sendData('/desMes')
@@ -20,7 +26,7 @@ const RequestDescriptionForm = ({ request }) => {
         if (request.status === 'ожидает ответа оператора') {
             return (
                 <div>
-                    <button type="button" onClick={sendMes}>Закрыть заявку</button>
+                    <button type="button" onClick={SendData}>Закрыть заявку</button>
                 </div>
             );
         } else if (request.status === 'В работе') {
