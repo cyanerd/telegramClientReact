@@ -15,7 +15,6 @@ const RequestDescriptionForm = ({ request }) => {
         if (request.status === 'ожидает ответа оператора') {
             return (
                 <div>
-                    <button>Взять в работу</button>
                     <button>Закрыть заявку</button>
                 </div>
             );
