@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import './RequestDescriptionForm.css';
 import { useTelegram } from "../Hooks/useTelegram";
 
@@ -10,12 +10,17 @@ const RequestDescriptionForm = ({ request }) => {
         tg.close()
         console.log('dsds')
     }
+    const sendMes = useCallback(()=>{
+        senMessage = "/desMes";
+        tg.sendData(sendMessage)
+        tg.close()
+    },[])
 
     const renderButtons = () => {
         if (request.status === 'ожидает ответа оператора') {
             return (
                 <div>
-                    <button>Закрыть заявку</button>
+                    <button onClick = {sendMes}>Закрыть заявку</button>
                 </div>
             );
         } else if (request.status === 'В работе') {
