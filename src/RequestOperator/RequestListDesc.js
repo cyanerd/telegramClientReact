@@ -48,8 +48,16 @@ const RequestListDesc = () => {
             });
         }
     }
-    
-    
+    const SendData = () =>{
+        tg.sendData('/desMes')
+        tg.close()
+    }
+
+
+    useEffect(() => {
+        tg.MainButton.onClick(SendData)
+    },[])
+
 
     useEffect(() => {
         const handleBackButton = () => {

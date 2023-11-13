@@ -16,11 +16,7 @@ const RequestDescriptionForm = ({ request }) => {
         tg.close()
     }
 
-    const sendMes = useCallback(()=>{
-        const senMessage = "/desMes";
-        tg.sendData('/desMes')
-        tg.close()
-    },[])
+    
 
     const renderButtons = () => {
         if (request.status === 'ожидает ответа оператора') {
