@@ -42,7 +42,7 @@ const RequestListDesc = () => {
     const MainBut = (status) => {
         tg.BackButton.show();
         if (status !== "В работе") {
-            tg.MainButton.show();
+            // tg.MainButton.show();
             tg.MainButton.setParams({
                 text: `Взять в работу`
             });
