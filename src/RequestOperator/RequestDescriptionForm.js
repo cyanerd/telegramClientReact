@@ -1,19 +1,38 @@
-import React, { useCallback } from 'react';
+import React, { useCallback ,useEffect,useState} from 'react';
 import './RequestDescriptionForm.css';
 import { useTelegram } from "../Hooks/useTelegram";
 
 const RequestDescriptionForm = ({ request }) => {
 
-    const { tg } = useTelegram();
+    const { tg,queryId } = useTelegram();
 
     const Onclose = () => {
         tg.close()
         console.log('dsds')
     }
 
-    const SendData = () =>{
-        tg.sendData('/desMes')
-        tg.close()
+    const onSendData = useCallback(() => {
+        const data = {
+            userRequestId: request.userRequestId,
+            username: request.username,
+            queryId,
+        }
+        fetch('http://localhost:3000/replyToUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+    }, [addedItems])
+    const SendData = async () =>{
+        try{
+
+            const response = await axios.post(`http://localhost:3000/reply/${id}`,{request});
+
+        }catch(e){
+
+        }
     }
 
     
@@ -22,7 +41,7 @@ const RequestDescriptionForm = ({ request }) => {
         if (request.status === 'ожидает ответа оператора') {
             return (
                 <div>
-                    <button type="button" onClick={SendData}>Закрыть заявку</button>
+                    <button type="button" onClick={onSendData}>Закрыть заявку</button>
                 </div>
             );
         } else if (request.status === 'В работе') {
