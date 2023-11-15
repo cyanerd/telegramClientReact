@@ -6,17 +6,18 @@ import RequestListDesc from './RequestOperator/RequestListDesc';
 import Button from '../src/components/Button/Button';
 import RequestUserList from './RequestUser/RequestUserList';
 import RequestUserDesc from './RequestUser/RequestUserDesc';
-
+import loadList from './load'
 const tg = window.Telegram.WebApp
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/RequestList" element={<RequestList />} />  
-        <Route path="/requestsOperator/:id" element={<RequestListDesc />} />  
-        <Route path="/RequestUserList" element={<RequestUserList />} />  
-        <Route path="/requests/:id" element={<RequestUserDesc />} />  
+        <Route path="/" element={<loadList />} />
+        <Route path="/RequestList" element={<RequestList />} />
+        <Route path="/requestsOperator/:id" element={<RequestListDesc />} />
+        <Route path="/RequestUserList" element={<RequestUserList />} />
+        <Route path="/requests/:id" element={<RequestUserDesc />} />
       </Routes>
     </BrowserRouter>
   );
