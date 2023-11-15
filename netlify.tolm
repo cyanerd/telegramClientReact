@@ -1,4 +1,0 @@
-[[redirects]]
-  from = "/*"
-  to = "/RequestList"
-  status = 200

@@ -13,10 +13,10 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<loadList />} />
+        <Route path="/" element={<RequestList />} />
         <Route path="/RequestList" element={<RequestList />} />
         <Route path="/requestsOperator/:id" element={<RequestListDesc />} />
-        <Route path="/RequestUserList" element={<RequestUserList />} />
+        <Route path="/RequestUserList/:id" element={<RequestUserList />} />
         <Route path="/requests/:id" element={<RequestUserDesc />} />
       </Routes>
     </BrowserRouter>
