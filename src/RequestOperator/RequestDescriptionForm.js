@@ -24,7 +24,7 @@ const RequestDescriptionForm = ({ request }) => {
             },
             body: JSON.stringify(data)
         })
-    }, [addedItems])
+    }, [request])
     const SendData = async () =>{
         try{
 
