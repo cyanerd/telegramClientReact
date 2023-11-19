@@ -51,8 +51,8 @@ const RequestUserDesc = () => {
     }
     const onSendData = useCallback(() => {
         const data = {
-            userRequestId: response.userRequestId,
-            username: response.username,
+            userRequestId: dataArray[0].userRequestId,
+            username: dataArray[0].username,
             queryId,
         }
         fetch('http://localhost:3000/replyToUser', {
