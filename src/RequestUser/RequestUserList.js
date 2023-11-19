@@ -56,7 +56,7 @@ const requestList = [
 
 const RequestUserList = () => {
   const { tg, queryId } = useTelegram();
-  const {id} = useParams
+  const {id} = useParams()
 
   const MainBut = () => {
     tg.MainButton.show();
