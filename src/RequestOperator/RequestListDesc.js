@@ -18,8 +18,6 @@ const RequestListDesc = () => {
             try {
                 const response = await axios.get(`http://localhost:3000/mes/${id}`);
                 setReqLL(response.data);
-
-                // Пример создания массива объектов с полными данными
                 const dataArray = response.data.map(item => ({
                     dialog: item.dialog,
                     userRequestId: item.userRequestId,
