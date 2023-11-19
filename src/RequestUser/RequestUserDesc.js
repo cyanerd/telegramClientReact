@@ -51,10 +51,24 @@ const RequestUserDesc = () => {
         tg.sendData('/desMes')
         tg.close()
     }
+    const onSendData = useCallback(() => {
+        const data = {
+            userRequestId: request.userRequestId,
+            username: request.username,
+            queryId,
+        }
+        fetch('http://localhost:3000/replyToUser', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+    }, [request])
 
 
     useEffect(() => {
-        tg.MainButton.onClick(SendData)
+        tg.MainButton.onClick(onSendData)
     },[])
 
 
