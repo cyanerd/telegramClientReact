@@ -62,7 +62,7 @@ const RequestUserList = () => {
     tg.MainButton.show();
     tg.BackButton.hide()
     tg.MainButton.setParams({
-      text: `Оставить заявку`
+      text: `Создать заявку`
     });
   }
 

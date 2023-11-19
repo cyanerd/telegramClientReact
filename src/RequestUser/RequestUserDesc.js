@@ -42,9 +42,8 @@ const RequestUserDesc = () => {
     const MainBut = (status) => {
         tg.BackButton.show();
         if (status !== "В работе") {
-            // tg.MainButton.show();
             tg.MainButton.setParams({
-                text: `Взять в работу`
+                text: `Дополнить заявку`
             });
         }
     }
@@ -63,7 +62,7 @@ const RequestUserDesc = () => {
         const handleBackButton = () => {
             navigate(-1);
         };
-        // MainBut();
+        MainBut(`sd`);
         tg.BackButton.onClick(handleBackButton);
         return () => {
             tg.BackButton.offClick(handleBackButton);
