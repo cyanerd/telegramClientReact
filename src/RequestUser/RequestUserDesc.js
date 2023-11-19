@@ -62,7 +62,7 @@ const RequestUserDesc = () => {
             },
             body: JSON.stringify(data)
         })
-    }, [response])
+    }, [dataArray, queryId])
 
 
     useEffect(() => {
