@@ -68,7 +68,7 @@ const RequestUserDesc = () => {
     useEffect(() => {
         tg.MainButton.onClick(onSendData)
         return () =>{
-            tg.MainButton.onClick(onSendData)
+            tg.MainButton.offClick(onSendData)
         }
     },[])
 

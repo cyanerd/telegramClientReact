@@ -3,10 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 import RequestList from './RequestOperator/RequestList';
 import RequestListDesc from './RequestOperator/RequestListDesc';
-import Button from '../src/components/Button/Button';
 import RequestUserList from './RequestUser/RequestUserList';
 import RequestUserDesc from './RequestUser/RequestUserDesc';
-import loadList from './load'
 const tg = window.Telegram.WebApp
 
 function App() {
