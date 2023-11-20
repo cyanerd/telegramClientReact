@@ -31,7 +31,7 @@ const RequestUserList = () => {
       <div className="request-header">
         <div className="header-item">ID</div>
         <div className="header-item">Никнейм пользователя</div>
-        <div className="header-item">Тема заявки</div>
+        <div className="header-item">Темaа заявки</div>
         <div className="header-item">Статус заявки</div>
       </div>
       {dataArray.length > 0 ? (
