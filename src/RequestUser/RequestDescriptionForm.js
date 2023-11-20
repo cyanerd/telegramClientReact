@@ -26,10 +26,7 @@ const RequestDescriptionForm = ({ request }) => {
         })
     }, [request])
     const MainBut = (status) => {
-        tg.BackButton.show();
-            tg.MainButton.setParams({
-                text: `Дополнить заявку`
-            });
+        tg.BackButton.hide();
     }
     useEffect(() => {
         MainBut('dasda')
@@ -47,7 +44,7 @@ const RequestDescriptionForm = ({ request }) => {
         } else if (request.status === 'В работе') {
             return (
                 <div>
-                    <button type="button">Закрыть заявку</button>
+                    <button type="button">ssss</button>
                 </div>
             );
         }
