@@ -27,7 +27,7 @@ const RequestUserDesc = () => {
                     username: item.username,
                     address: item.address
                 }));
-                MainBut(dataArray[0].status);
+                // MainBut(dataArray[0].status);
                 console.log('Full Data Array:', dataArray[0].status);
                 setDataArray(dataArray);
             } catch (error) {
@@ -37,12 +37,12 @@ const RequestUserDesc = () => {
 
         fetchData();
     }, [id]);
-    const MainBut = (status) => {
-        tg.BackButton.show();
-            tg.MainButton.setParams({
-                text: `Дополнить заявку`
-            });
-    }
+    // const MainBut = (status) => {
+    //     tg.BackButton.show();
+    //         tg.MainButton.setParams({
+    //             text: `Дополнить заявку`
+    //         });
+    // }
     const SendData = () =>{
         tg.sendData('/desMes')
         tg.close()
@@ -64,9 +64,9 @@ const RequestUserDesc = () => {
     }, [dataArray, queryId])
 
 
-    useEffect(() => {
-        tg.onEvent('mainButtonClicked', onSendData)
-    },[])
+    // useEffect(() => {
+    //     tg.onEvent('mainButtonClicked', onSendData)
+    // },[])
 
 
     useEffect(() => {

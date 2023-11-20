@@ -25,8 +25,16 @@ const RequestDescriptionForm = ({ request }) => {
             body: JSON.stringify(data)
         })
     }, [request])
-
-    
+    const MainBut = (status) => {
+        tg.BackButton.show();
+            tg.MainButton.setParams({
+                text: `Дополнить заявку`
+            });
+    }
+    useEffect(() => {
+        MainBut('dasda')
+        tg.onEvent('mainButtonClicked', onSendData)
+    },[])
 
     const renderButtons = () => {
         if (request.status === 'ожидает ответа оператора') {
