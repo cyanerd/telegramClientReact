@@ -50,6 +50,7 @@ const RequestUserDesc = () => {
         tg.close()
     }
     const onSendData = useCallback(() => {
+        console.log('dsadasd')
         const data = {
             userRequestId: dataArray[0].userRequestId,
             username: dataArray[0].username,
