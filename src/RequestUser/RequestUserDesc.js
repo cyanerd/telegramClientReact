@@ -39,11 +39,9 @@ const RequestUserDesc = () => {
     }, [id]);
     const MainBut = (status) => {
         tg.BackButton.show();
-        if (status !== "В работе") {
             tg.MainButton.setParams({
                 text: `Дополнить заявку`
             });
-        }
     }
     const SendData = () =>{
         tg.sendData('/desMes')
@@ -67,9 +65,9 @@ const RequestUserDesc = () => {
 
 
     useEffect(() => {
-        tg.MainButton.onClick(onSendData)
+        tg.MainButton.onClick(onSendData())
         return () =>{
-            tg.MainButton.offClick(onSendData)
+            tg.MainButton.offClick(onSendData())
         }
     },[])
 
@@ -78,7 +76,6 @@ const RequestUserDesc = () => {
         const handleBackButton = () => {
             navigate(-1);
         };
-        MainBut(`sd`);
         tg.BackButton.onClick(handleBackButton);
         return () => {
             tg.BackButton.offClick(handleBackButton);
